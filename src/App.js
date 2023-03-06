@@ -4,7 +4,7 @@ import Chat from './components/Chat';
 import { Routes, Route } from 'react-router-dom';
 
 /* uncomment navbar */
-import NavBar from './components/NavBar';
+/* import NavBar from './components/NavBar'; */
 import MUI from './components/MUI.jsx';
 
 import { useAuthState } from 'react-firebase-hooks/auth';
