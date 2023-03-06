@@ -2,3 +2,4 @@
 ___
 
 Workshop for the January 2023 Cohort of the Web Development Course at Ironhack Lisbon Campus.
+Pre built using some Firebase components.
