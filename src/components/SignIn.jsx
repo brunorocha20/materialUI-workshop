@@ -1,10 +1,7 @@
 import React from 'react';
 import googlelogo from '../Google__G__Logo.svg';
 import ironhack from '../ironhack.png.webp';
-
 import { GoogleAuthProvider, GithubAuthProvider, signInWithPopup } from 'firebase/auth';
-
-/* Step 6- below */
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 
@@ -22,7 +19,6 @@ firebase.initializeApp({
 const auth = firebase.auth();
 
 function SignIn() {
-  /* Step 10- below */
   const signInWithGoogle = () => {
     const provider = new GoogleAuthProvider();
 
@@ -39,7 +35,7 @@ function SignIn() {
   };
 
   return (
-    <div className='App'>
+    <div className="App">
       <img id="ironhack" src={ironhack} alt="ironhack" />
       <div id="authDiv">
         <div id="gbtn" style={{ marginTop: '10px' }}>

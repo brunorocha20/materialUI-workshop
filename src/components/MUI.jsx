@@ -22,7 +22,6 @@ import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import ListSubheader from '@mui/material/ListSubheader';
 
-
 function MUI() {
   const [state, setState] = React.useState({
     gilad: true,
@@ -39,48 +38,48 @@ function MUI() {
 
   const { gilad, jason, antoine } = state;
   const error = [gilad, jason, antoine].filter((v) => v).length !== 2;
-  
+
   return (
     <div>
       <div className="materialUI">
         <div>
-        <Box sx={{ width: '300px', maxWidth: 360, bgcolor: '#ffe4e4' }}>
-      <nav aria-label="main mailbox folders">
-        <List>
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <InboxIcon />
-              </ListItemIcon>
-              <ListItemText primary="Inbox" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <DraftsIcon />
-              </ListItemIcon>
-              <ListItemText primary="Drafts" />
-            </ListItemButton>
-          </ListItem>
-        </List>
-      </nav>
-      <Divider />
-      <nav aria-label="secondary mailbox folders">
-        <List>
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemText primary="Trash" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton component="a" href="#simple-list">
-              <ListItemText primary="Spam" />
-            </ListItemButton>
-          </ListItem>
-        </List>
-      </nav>
-    </Box>
+          <Box sx={{ width: '300px', maxWidth: 360, bgcolor: '#ffe4e4' }}>
+            <nav aria-label="main mailbox folders">
+              <List>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemIcon>
+                      <InboxIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Inbox" />
+                  </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemIcon>
+                      <DraftsIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Drafts" />
+                  </ListItemButton>
+                </ListItem>
+              </List>
+            </nav>
+            <Divider />
+            <nav aria-label="secondary mailbox folders">
+              <List>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemText primary="Trash" />
+                  </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemButton component="a" href="#simple-list">
+                    <ListItemText primary="Spam" />
+                  </ListItemButton>
+                </ListItem>
+              </List>
+            </nav>
+          </Box>
         </div>
 
         <div>
@@ -122,7 +121,7 @@ function MUI() {
           </ImageList> */}
         </div>
 
-        <div className='checkbox'>
+        <div className="checkbox">
           <Box sx={{ display: 'flex' }}>
             <FormControl
               required
@@ -156,9 +155,6 @@ function MUI() {
 }
 
 export default MUI;
-
-
-
 
 /* import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -208,7 +204,7 @@ const style = {
   );
  */
 
-  const itemData = [
+const itemData = [
   {
     img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
     title: 'Breakfast',

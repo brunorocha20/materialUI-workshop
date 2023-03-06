@@ -1,4 +1,5 @@
-### Firebase Workshop
+### Material-UI Workshop
 ___
 
-Workshop for the October 2022 Cohort of the Web Development Course at Ironhack Lisbon Campus.
+Workshop for the January 2023 Cohort of the Web Development Course at Ironhack Lisbon Campus.
+Pre built using some Firebase components.

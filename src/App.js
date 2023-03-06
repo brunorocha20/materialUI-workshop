@@ -5,14 +5,13 @@ import { Routes, Route } from 'react-router-dom';
 
 /* uncomment navbar */
 import NavBar from './components/NavBar';
-
 import MUI from './components/MUI.jsx';
 
 import { useAuthState } from 'react-firebase-hooks/auth';
-
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
+
 const auth = firebase.auth();
 
 function App() {
