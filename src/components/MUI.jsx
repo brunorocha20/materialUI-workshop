@@ -24,9 +24,9 @@ import ListSubheader from '@mui/material/ListSubheader';
 
 function MUI() {
   const [state, setState] = React.useState({
-    gilad: true,
-    jason: false,
-    antoine: false,
+    lucas: true,
+    joão: false,
+    andré: false,
   });
 
   const handleChange = (event) => {
@@ -36,92 +36,21 @@ function MUI() {
     });
   };
 
-  const { gilad, jason, antoine } = state;
-  const error = [gilad, jason, antoine].filter((v) => v).length !== 2;
+  const { lucas, joão, andré } = state;
+  const error = [lucas, joão, andré].filter((answer) => answer).length !== 2;
 
   return (
     <div>
       <div className="materialUI">
-        <div>
-          <Box sx={{ width: '300px', maxWidth: 360, bgcolor: '#ffe4e4' }}>
-            <nav aria-label="main mailbox folders">
-              <List>
-                <ListItem disablePadding>
-                  <ListItemButton>
-                    <ListItemIcon>
-                      <InboxIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="Inbox" />
-                  </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding>
-                  <ListItemButton>
-                    <ListItemIcon>
-                      <DraftsIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="Drafts" />
-                  </ListItemButton>
-                </ListItem>
-              </List>
-            </nav>
-            <Divider />
-            <nav aria-label="secondary mailbox folders">
-              <List>
-                <ListItem disablePadding>
-                  <ListItemButton>
-                    <ListItemText primary="Trash" />
-                  </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding>
-                  <ListItemButton component="a" href="#simple-list">
-                    <ListItemText primary="Spam" />
-                  </ListItemButton>
-                </ListItem>
-              </List>
-            </nav>
-          </Box>
-        </div>
+        <div className="Box-1">{/* box example here */}</div>
 
-        <div>
-          <Stack spacing={4} direction="row" sx={{ color: 'action.active' }}>
-            <Badge color="primary" badgeContent={99}>
-              <MailIcon />
-            </Badge>
-            <Badge color="secondary" badgeContent={100}>
-              <MailIcon />
-            </Badge>
-            <Badge color="success" badgeContent={1000} max={999}>
-              <MailIcon />
-            </Badge>
-          </Stack>
-        </div>
+        <div className="Stack-2">{/* email stack example here */}</div>
       </div>
 
       <div className="materialUI">
-        <div>
-          {/* <ImageList sx={{ width: '500px', height: '450px' }}>
-            <ImageListItem key="Subheader" cols={2}>
-              <ListSubheader component="div">Foodie List</ListSubheader>
-            </ImageListItem>
-            {itemData.map((item) => (
-              <ImageListItem key={item.img}>
-                <img
-                  src={`${item.img}?w=248&fit=crop&auto=format`}
-                  srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                  alt={item.title}
-                  loading="lazy"
-                />
-                <ImageListItemBar
-                  title={item.title}
-                  subtitle={item.author}
-                  
-                />
-              </ImageListItem>
-            ))}
-          </ImageList> */}
-        </div>
+        <div className="ImageList-3">{/* image-list example here */}</div>
 
-        <div className="checkbox">
+        <div className="Checkbox-4">
           <Box sx={{ display: 'flex' }}>
             <FormControl
               required
@@ -133,16 +62,16 @@ function MUI() {
               <FormLabel component="legend">Assign Responsability</FormLabel>
               <FormGroup>
                 <FormControlLabel
-                  control={<Checkbox checked={gilad} onChange={handleChange} name="gilad" />}
-                  label="Gilad Gray"
+                  control={<Checkbox checked={lucas} onChange={handleChange} name="lucas" />}
+                  label="Lucas Zaquine"
                 />
                 <FormControlLabel
-                  control={<Checkbox checked={jason} onChange={handleChange} name="jason" />}
-                  label="Jason Killian"
+                  control={<Checkbox checked={joão} onChange={handleChange} name="joão" />}
+                  label="João Gonçalves"
                 />
                 <FormControlLabel
-                  control={<Checkbox checked={antoine} onChange={handleChange} name="antoine" />}
-                  label="Antoine Llorca"
+                  control={<Checkbox checked={andré} onChange={handleChange} name="andré" />}
+                  label="André Ferreira"
                 />
               </FormGroup>
               <FormHelperText>You need to pick two</FormHelperText>
@@ -156,6 +85,11 @@ function MUI() {
 
 export default MUI;
 
+
+
+
+// Other simple list example with different type style changes
+
 /* import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
@@ -165,8 +99,7 @@ import Badge from '@mui/material/Badge';
 import MailIcon from '@mui/icons-material/Mail';
 
 const style = {
-  width: '100%',
-  maxWidth: 360,
+  width: '250px',
   bgcolor: '#ffe4e4',
 };
 
@@ -189,20 +122,12 @@ const style = {
       </ListItem>
     </List>
 
-    <Stack spacing={4} direction="row" sx={{ color: 'action.active' }}>
-      <Badge color="secondary" badgeContent={99}>
-        <MailIcon />
-      </Badge>
-      <Badge color="secondary" badgeContent={100}>
-        <MailIcon />
-      </Badge>
-      <Badge color="secondary" badgeContent={1000} max={999}>
-        <MailIcon />
-      </Badge>
-    </Stack>
     </div>
   );
  */
+
+
+// Already imported itemData for the imageList
 
 const itemData = [
   {
