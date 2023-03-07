@@ -229,9 +229,9 @@ main {
 }
 
 #ironhack {
-  width: 180px;
-  margin-bottom: -100px;
-  margin-top: 50px;
+  width: 200px;
+  margin-bottom: -50px;
+  margin-top: 50px; 
 }
 
 #ironRight {

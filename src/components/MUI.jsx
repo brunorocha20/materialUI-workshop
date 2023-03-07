@@ -9,9 +9,9 @@ import Checkbox from '@mui/material/Checkbox';
 
 function MUI() {
   const [state, setState] = React.useState({
-    lucas: true,
+    lucas: false,
     joão: false,
-    andré: false,
+    andré: true,
   });
 
   const handleChange = (event) => {
