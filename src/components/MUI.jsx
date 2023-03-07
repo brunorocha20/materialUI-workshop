@@ -1,15 +1,4 @@
 import React from 'react';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import Divider from '@mui/material/Divider';
-import Stack from '@mui/material/Stack';
-import Badge from '@mui/material/Badge';
-import MailIcon from '@mui/icons-material/Mail';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import InboxIcon from '@mui/icons-material/Inbox';
-import DraftsIcon from '@mui/icons-material/Drafts';
 import Box from '@mui/material/Box';
 import FormLabel from '@mui/material/FormLabel';
 import FormControl from '@mui/material/FormControl';
@@ -17,10 +6,6 @@ import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormHelperText from '@mui/material/FormHelperText';
 import Checkbox from '@mui/material/Checkbox';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
-import ListSubheader from '@mui/material/ListSubheader';
 
 function MUI() {
   const [state, setState] = React.useState({
@@ -42,7 +27,7 @@ function MUI() {
   return (
     <div>
       <div className="materialUI">
-        <div className="Box-1">{/* box example here */}</div>
+        <div className="Box-1">{/* box/list example here */}</div>
 
         <div className="Stack-2">{/* email stack example here */}</div>
       </div>
@@ -85,12 +70,10 @@ function MUI() {
 
 export default MUI;
 
-
-
-
 // Other simple list example with different type style changes
 
-/* import List from '@mui/material/List';
+/* 
+import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
@@ -99,12 +82,12 @@ import Badge from '@mui/material/Badge';
 import MailIcon from '@mui/icons-material/Mail';
 
 const style = {
-  width: '250px',
-  bgcolor: '#ffe4e4',
-};
+    width: '250px',
+    bgcolor: '#ffe4e4',
+    // borderRadius: '10px',
+    // boxShadow: 10,
+  };
 
-  return (
-    <div className='list-divider'>
     <List sx={style} component="nav" aria-label="mailbox folders">
       <ListItem button>
         <ListItemText primary="Inbox" />
@@ -121,11 +104,7 @@ const style = {
         <ListItemText primary="Spam" />
       </ListItem>
     </List>
-
-    </div>
-  );
  */
-
 
 // Already imported itemData for the imageList
 
