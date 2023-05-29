@@ -106,7 +106,7 @@ const style = {
     </List>
  */
 
-// Already imported itemData for the imageList
+// Already imported itemData for the imageList example
 
 const itemData = [
   {

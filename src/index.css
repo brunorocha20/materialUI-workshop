@@ -105,3 +105,14 @@ main {
   align-items: baseline;
   display: flex;
 }
+
+#ironhack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7vh;
+}
+
+#ironhack img {
+  width: 18vw;
+}
