@@ -9,9 +9,9 @@ import Checkbox from '@mui/material/Checkbox';
 
 function MUI() {
   const [state, setState] = React.useState({
-    lucas: false,
+    bruno: false,
     joão: false,
-    andré: true,
+    bernardo: true,
   });
 
   const handleChange = (event) => {
@@ -21,8 +21,8 @@ function MUI() {
     });
   };
 
-  const { lucas, joão, andré } = state;
-  const error = [lucas, joão, andré].filter((answer) => answer).length !== 2;
+  const { bruno, joão, bernardo } = state;
+  const error = [bruno, joão, bernardo].filter((answer) => answer).length !== 2;
 
   return (
     <div>
@@ -47,16 +47,16 @@ function MUI() {
               <FormLabel component="legend">Assign Responsability</FormLabel>
               <FormGroup>
                 <FormControlLabel
-                  control={<Checkbox checked={lucas} onChange={handleChange} name="lucas" />}
-                  label="Lucas Zaquine"
+                  control={<Checkbox checked={bruno} onChange={handleChange} name="bruno" />}
+                  label="Bruno Rocha"
                 />
                 <FormControlLabel
                   control={<Checkbox checked={joão} onChange={handleChange} name="joão" />}
                   label="João Gonçalves"
                 />
                 <FormControlLabel
-                  control={<Checkbox checked={andré} onChange={handleChange} name="andré" />}
-                  label="André Ferreira"
+                  control={<Checkbox checked={bernardo} onChange={handleChange} name="bernardo" />}
+                  label="Bernardo de Melo"
                 />
               </FormGroup>
               <FormHelperText>You need to pick two</FormHelperText>
