@@ -6,6 +6,7 @@ function Homepage() {
     <div className="App">
       <div id="ironhack">
         <img src={ironhack} alt="ironhack" />
+        <h1>Welcome to the Fastest Material-UI Workshop</h1>
       </div>
     </div>
   );
