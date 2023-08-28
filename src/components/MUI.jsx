@@ -10,7 +10,7 @@ import Checkbox from '@mui/material/Checkbox';
 function MUI() {
   const [state, setState] = React.useState({
     bruno: false,
-    joão: false,
+    diogo: false,
     bernardo: true,
   });
 
@@ -21,8 +21,8 @@ function MUI() {
     });
   };
 
-  const { bruno, joão, bernardo } = state;
-  const error = [bruno, joão, bernardo].filter((answer) => answer).length !== 2;
+  const { bruno, diogo, bernardo } = state;
+  const error = [bruno, diogo, bernardo].filter((answer) => answer).length !== 2;
 
   return (
     <div>
@@ -51,7 +51,7 @@ function MUI() {
                   label="Bruno Rocha"
                 />
                 <FormControlLabel
-                  control={<Checkbox checked={joão} onChange={handleChange} name="joão" />}
+                  control={<Checkbox checked={diogo} onChange={handleChange} name="diogo" />}
                   label="João Gonçalves"
                 />
                 <FormControlLabel
