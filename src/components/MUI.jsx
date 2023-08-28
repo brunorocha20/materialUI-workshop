@@ -52,7 +52,7 @@ function MUI() {
                 />
                 <FormControlLabel
                   control={<Checkbox checked={diogo} onChange={handleChange} name="diogo" />}
-                  label="João Gonçalves"
+                  label="Diogo Capitão"
                 />
                 <FormControlLabel
                   control={<Checkbox checked={bernardo} onChange={handleChange} name="bernardo" />}
@@ -77,9 +77,7 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
-import Stack from '@mui/material/Stack';
-import Badge from '@mui/material/Badge';
-import MailIcon from '@mui/icons-material/Mail';
+
 
 const style = {
     width: '250px',
