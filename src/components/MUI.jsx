@@ -6,6 +6,20 @@ import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormHelperText from '@mui/material/FormHelperText';
 import Checkbox from '@mui/material/Checkbox';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import Divider from '@mui/material/Divider';
+import DownhillSkiingIcon from '@mui/icons-material/DownhillSkiing';
+import Stack from '@mui/material/Stack';
+import Badge from '@mui/material/Badge';
+import MailIcon from '@mui/icons-material/Mail';
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
+import ImageListItemBar from '@mui/material/ImageListItemBar';
+import ListSubheader from '@mui/material/ListSubheader';
+import IconButton from '@mui/material/IconButton';
+import InfoIcon from '@mui/icons-material/Info';
 
 function MUI() {
   const [state, setState] = React.useState({
@@ -24,16 +38,85 @@ function MUI() {
   const { bruno, diogo, bernardo } = state;
   const error = [bruno, diogo, bernardo].filter((answer) => answer).length !== 2;
 
+  /* variable called style can be appplied to multiple components */
+  const style = {
+    width: '250px',
+    bgcolor: '#ffe4e4',
+    borderRadius: '10px',
+    boxShadow: 10,
+  };
+
   return (
     <div>
       <div className="materialUI">
-        <div className="Box-1">{/* box/list example here */}</div>
+        <div className="Box-1">
+          <List sx={style} component="nav" aria-label="mailbox folders">
+            <ListItem button>
+              <ListItemText primary="Inbox" />
+            </ListItem>
+            <Divider />
+            <ListItem button divider>
+              <ListItemText primary="Drafts" />
+            </ListItem>
+            <ListItem button>
+              <DownhillSkiingIcon></DownhillSkiingIcon>
+              <ListItemText primary="Trash" />
+            </ListItem>
+            <Divider light />
+            <ListItem button>
+              <ListItemText primary="Spam" />
+            </ListItem>
+          </List>
+        </div>
 
-        <div className="Stack-2">{/* email stack example here */}</div>
+        <div className="Stack-2">
+          <Stack spacing={4} direction="row" sx={{ color: 'action.active' }}>
+            <Badge color="error" badgeContent={99}>
+              <MailIcon />
+            </Badge>
+            <Badge color="secondary" badgeContent={100}>
+              <MailIcon />
+            </Badge>
+            <Badge color="success" badgeContent={15} max={9}>
+              <MailIcon />
+            </Badge>
+          </Stack>
+        </div>
       </div>
 
       <div className="materialUI">
-        <div className="ImageList-3">{/* image-list example here */}</div>
+        <div className="ImageList-3">
+                {/* you can use vw and vh to control responsiveness */}
+          <ImageList sx={{ width: '30vw', height: '45vh' }}>
+            <ImageListItem key="Subheader" cols={2}>
+              <ListSubheader component="div">Fasting</ListSubheader>
+            </ImageListItem>
+              {/* map over your data, in this case is `itemData` 
+              but it can be response from an API or Database */}
+            {itemData.map((item) => (
+              <ImageListItem key={item.img}>
+                <img
+                  src={`${item.img}?w=248&fit=crop&auto=format`}
+                  srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                  alt={item.title}
+                  loading="lazy"
+                />
+                <ImageListItemBar
+                  title={item.title}
+                  subtitle={item.author}
+                  actionIcon={
+                    <IconButton
+                      sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
+                      aria-label={`info about ${item.title}`}
+                    >
+                      <InfoIcon />
+                    </IconButton>
+                  }
+                />
+              </ImageListItem>
+            ))}
+          </ImageList>
+        </div>
 
         <div className="Checkbox-4">
           <Box sx={{ display: 'flex' }}>
@@ -69,40 +152,6 @@ function MUI() {
 }
 
 export default MUI;
-
-// Other simple list example with different type style changes
-
-/* 
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import Divider from '@mui/material/Divider';
-
-
-const style = {
-    width: '250px',
-    bgcolor: '#ffe4e4',
-    // borderRadius: '10px',
-    // boxShadow: 10,
-  };
-
-    <List sx={style} component="nav" aria-label="mailbox folders">
-      <ListItem button>
-        <ListItemText primary="Inbox" />
-      </ListItem>
-      <Divider />
-      <ListItem button divider>
-        <ListItemText primary="Drafts" />
-      </ListItem>
-      <ListItem button>
-        <ListItemText primary="Trash" />
-      </ListItem>
-      <Divider light />
-      <ListItem button>
-        <ListItemText primary="Spam" />
-      </ListItem>
-    </List>
- */
 
 // Already imported itemData for the imageList example
 
